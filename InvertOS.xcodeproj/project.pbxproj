@@ -1,0 +1,124 @@
+
+// !$*UTF8*$!
+{
+  archiveVersion = 1;
+  classes = { };
+  objectVersion = 52;
+  objects = {
+    /* Begin PBXProject section */
+    001 /* Project object */ = {
+      isa = PBXProject;
+      attributes = {
+        LastUpgradeCheck = 1300;
+        ORGANIZATIONNAME = "InvertOS";
+      };
+      buildConfigurationList = 002 /* Build configuration list */;
+      compatibilityVersion = "Xcode 12.0";
+      developmentRegion = en;
+      hasScannedForEncodings = 0;
+      knownRegions = (en);
+      mainGroup = 003;
+      productRefGroup = 004;
+      projectDirPath = "";
+      projectRoot = "";
+      targets = (005);
+    };
+    /* End PBXProject section */
+
+    /* Begin PBXBuildFile section */
+    100 /* InvertOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200; };
+    101 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201; };
+    102 /* AppIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202; };
+    103 /* DynamicIslandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203; };
+    /* End PBXBuildFile section */
+
+    /* Begin PBXFileReference section */
+    200 /* InvertOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvertOSApp.swift; sourceTree = "<group>"; };
+    201 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+    202 /* AppIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconView.swift; sourceTree = "<group>"; };
+    203 /* DynamicIslandView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicIslandView.swift; sourceTree = "<group>"; };
+    300 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+    400 /* InvertOSApp */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = InvertOSApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+    /* End PBXFileReference section */
+
+    /* Begin PBXGroup section */
+    003 = {
+      isa = PBXGroup;
+      children = (004, 200, 201, 202, 203, 300);
+      sourceTree = "<group>";
+    };
+    004 = {
+      isa = PBXGroup;
+      children = (400);
+      name = Products;
+      sourceTree = "<group>";
+    };
+    /* End PBXGroup section */
+
+    /* Begin PBXNativeTarget section */
+    005 = {
+      isa = PBXNativeTarget;
+      buildConfigurationList = 006;
+      buildPhases = (007);
+      buildRules = ( );
+      dependencies = ( );
+      name = InvertOSApp;
+      productName = InvertOSApp;
+      productReference = 400;
+      productType = "com.apple.product-type.application";
+    };
+    /* End PBXNativeTarget section */
+
+    /* Begin PBXSourcesBuildPhase section */
+    007 = {
+      isa = PBXSourcesBuildPhase;
+      buildActionMask = 2147483647;
+      files = (100, 101, 102, 103);
+      runOnlyForDeploymentPostprocessing = 0;
+    };
+    /* End PBXSourcesBuildPhase section */
+
+    /* Begin XCBuildConfiguration section */
+    008 = {
+      isa = XCBuildConfiguration;
+      buildSettings = {
+        INFOPLIST_FILE = Info.plist;
+        PRODUCT_BUNDLE_IDENTIFIER = com.example.invertosapp;
+        PRODUCT_NAME = "$(TARGET_NAME)";
+        SWIFT_VERSION = 5.0;
+        IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+        TARGETED_DEVICE_FAMILY = "1,2";
+      };
+      name = Debug;
+    };
+    009 = {
+      isa = XCBuildConfiguration;
+      buildSettings = {
+        INFOPLIST_FILE = Info.plist;
+        PRODUCT_BUNDLE_IDENTIFIER = com.example.invertosapp;
+        PRODUCT_NAME = "$(TARGET_NAME)";
+        SWIFT_VERSION = 5.0;
+        IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+        TARGETED_DEVICE_FAMILY = "1,2";
+      };
+      name = Release;
+    };
+    /* End XCBuildConfiguration section */
+
+    /* Begin XCConfigurationList section */
+    002 = {
+      isa = XCConfigurationList;
+      buildConfigurations = (008, 009);
+      defaultConfigurationIsVisible = 0;
+      defaultConfigurationName = Release;
+    };
+    006 = {
+      isa = XCConfigurationList;
+      buildConfigurations = (008, 009);
+      defaultConfigurationIsVisible = 0;
+      defaultConfigurationName = Release;
+    };
+    /* End XCConfigurationList section */
+  };
+  rootObject = 001;
+}
