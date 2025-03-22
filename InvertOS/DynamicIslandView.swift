@@ -1,36 +1,48 @@
-
 import SwiftUI
 
 struct DynamicIslandView: View {
-    @State private var showActions = false
+    @State private var isExpanded = false
 
     var body: some View {
-        ZStack {
-            RoundedRectangle(cornerRadius: 30)
-                .fill(Color.gray.opacity(0.8))
-            HStack {
-                if showActions {
-                    Button(action: {}) {
-                        Image(systemName: "flashlight.on.fill")
-                            .foregroundColor(.white)
+        HStack {
+            // Часть острова
+            RoundedRectangle(cornerRadius: 10)
+                .fill(Color.gray)
+                .frame(width: 40, height: 10)
+                .overlay(
+                    Circle()
+                        .fill(Color.red)
+                        .frame(width: 8, height: 8)
+                )
+                .onTapGesture {
+                    withAnimation {
+                        isExpanded.toggle()
                     }
-                    Spacer()
-                    Button(action: {}) {
-                        Image(systemName: "gear")
-                            .foregroundColor(.white)
-                    }
-                } else {
-                    Text("●")
-                        .foregroundColor(.white)
-                        .font(.system(size: 24))
                 }
+
+            if isExpanded {
+                HStack(spacing: 20) {
+                    Button(action: {
+                        // Фонарик
+                        print("Flashlight tapped")
+                    }) {
+                        Image(systemName: "flashlight.on.fill")
+                            .font(.system(size: 20))
+                            .foregroundColor(.white)
+                    }
+
+                    Button(action: {
+                        // Настройки
+                        print("Settings tapped")
+                    }) {
+                        Image(systemName: "gear")
+                            .font(.system(size: 20))
+                            .foregroundColor(.white)
+                    }
+                }
+                .transition(.move(edge: .trailing))
             }
-            .padding(.horizontal, 30)
         }
-        .onTapGesture {
-            withAnimation {
-                showActions.toggle()
-            }
-        }
+        .padding()
     }
 }
