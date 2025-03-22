@@ -33,7 +33,7 @@ jobs:
         mv InvertOS.ipa output/
 
     - name: Upload IPA
-      uses: actions/upload-artifact@3b5be7c2aa0a9242be168ec60cc69a4a51c22278
+      uses: actions/upload-artifact@v4
       with:
         name: InvertOS
         path: output/InvertOS.ipa
