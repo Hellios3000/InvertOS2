@@ -1,0 +1,17 @@
+name: Build InvertOS
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Build
+      run: |
+        xcodebuild -project InvertOS.xcodeproj -scheme InvertOSApp -destination 'generic/platform=iOS' clean build CODE_SIGNING_ALLOWED=NO
