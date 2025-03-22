@@ -1,34 +1,40 @@
-
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
         ZStack {
-            Color.black.ignoresSafeArea()
-            VStack(spacing: 20) {
-                Spacer()
-                HStack(spacing: 30) {
-                    AppIconView(label: "Mail", systemName: "envelope")
-                    AppIconView(label: "Photos", systemName: "photo")
-                    AppIconView(label: "Music", systemName: "music.note")
+            Color.black.edgesIgnoringSafeArea(.all)
+            VStack {
+                // Псевдо-статус-бар
+                HStack {
+                    Text("85%")
+                    Spacer()
+                    Text("21:43")
                 }
+                .foregroundColor(.white)
+                .padding()
+
                 Spacer()
-                VStack(spacing: 10) {
-                    HStack {
-                        Text("85%")
-                            .foregroundColor(.green)
-                        Spacer()
-                        Text("21:43")
-                            .foregroundColor(.white)
-                    }
-                    .padding(.horizontal, 30)
-                    DynamicIslandView()
-                        .frame(height: 50)
-                        .padding(.horizontal, 80)
+
+                // Три центральные иконки
+                HStack(spacing: 40) {
+                    AppIconView(systemName: "envelope")
+                    AppIconView(systemName: "photo")
+                    AppIconView(systemName: "music.note")
                 }
-                .padding(.bottom, 20)
+
+                Spacer()
+
+                // Динамический остров внизу
+                DynamicIslandView()
             }
-            .padding()
+            .rotationEffect(.degrees(180))
         }
+    }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
     }
 }
